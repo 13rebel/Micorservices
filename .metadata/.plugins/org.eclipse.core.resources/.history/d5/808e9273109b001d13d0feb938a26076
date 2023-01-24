@@ -1,0 +1,5 @@
+package com.userservice.userRepo;
+
+public interface UserRepo {
+
+}
