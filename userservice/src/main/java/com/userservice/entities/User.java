@@ -3,6 +3,7 @@ package com.userservice.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 
 @Entity
 public class User {
@@ -20,6 +21,9 @@ public class User {
 	
 	@Column(name="ABOUT" , length = 50)
 	private String about;
+	
+	@Transient
+	private BootService bookService;
 	
 	public String getUserId() {
 		return userId;
@@ -45,6 +49,13 @@ public class User {
 	public void setAbout(String about) {
 		this.about = about;
 	}
+	public BootService getBookService() {
+		return bookService;
+	}
+	public void setBookService(BootService bookService) {
+		this.bookService = bookService;
+	}
+	
 	
 	
 	
